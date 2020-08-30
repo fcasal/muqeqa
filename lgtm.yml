@@ -1,0 +1,11 @@
+extraction:
+  cpp:
+    prepare:
+      packages:
+      - "gcc-7"
+      - "g++-7"
+    configure:
+      command: "./configure --disable-guest-agent-msi --disable-docs --cxx=/usr/bin/g++-7\
+        \ --cc=/usr/bin/gcc-7 --disable-debug-info  --target-list=x86_64-softmmu"
+    index:
+      build_command: "make -j5"
